@@ -21,31 +21,50 @@ function pad(n) {
 }
 
 r.addEventListener('change', function () {
-    setColor();
+    // setColor();
     r_out.value = r.value;
 }, false);
 
 r.addEventListener('input', function () {
-    setColor();
+    // setColor();
     r_out.value = r.value;
 }, false);
 
 g.addEventListener('change', function () {
-    setColor();
+    // setColor();
     g_out.value = g.value;
 }, false);
 
 g.addEventListener('input', function () {
-    setColor();
+    // setColor();
     g_out.value = g.value;
 }, false);
 
 b.addEventListener('change', function () {
-    setColor();
+    // setColor();
     b_out.value = b.value;
 }, false);
 
 b.addEventListener('input', function () {
-    setColor();
+    // setColor();
     b_out.value = b.value;
 }, false);
+
+var buttonSubmit = document.querySelector('#buttonSubmit');
+buttonSubmit.addEventListener("click", function () {
+    setColor();
+},
+    false);
+
+var buttonCancel = document.querySelector('#buttonCancel');
+buttonCancel.addEventListener("click", function () {
+    r.value = 0;
+    g.value = 0;
+    b.value = 0;
+    r_out.value = 0;
+    g_out.value = 0;
+    b_out.value = 0;
+
+    setColor();
+},
+    false);
